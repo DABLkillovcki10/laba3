@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание номер 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, Arial, sans-serif;
+            background: forestgreen;
+            color: #111;
+            line-height: 1.5;
+        }
+        a:link{
+            color: rgb(0, 17, 255); 
+        }
+        a:visited{
+            color: rgb(255, 0, 0); 
+        }
+        a:hover{
+            color: rgb(255, 0, 221); 
+        }
+        a:active{
+            color: aquamarine; 
+        }
+        a{ 
+            text-decoration: none; 
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: #f8f8f8;
+            border: solid 2px black;
+            border-radius: 32px;
+            margin: 0.5rem 2.5% 0;
+        }
+       
+        .nav {
+            background: aquamarine;
+            border: solid 2px black;
+            border-radius: 32px;
+            margin: 1rem 2.5% 0;
+            padding: 0.75rem 1rem;
+        }
+        .nav__list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .nav__list a {
+            display: block;
+            padding: 0.3rem 0;
+        }
+        .main {
+            margin: 1rem 2.5% 0;
+        }
+        .content-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .table-section{
+            order: -1; 
+        } 
+        .links{ 
+            order:  1; 
+        } 
+        section {
+            background: aquamarine;
+            border: solid 2px black;
+            border-radius: 32px;
+            padding: 1rem;
+        }
+        h2 {
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .first_text {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .imaga {
+            width: 13%;
+        }
+        .mipo {
+            display: flex;
+            justify-content: center;
+        }
+        .table {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid black;
+            background: black;
+        }
+        .table__row {
+            display: flex;
+            gap: 2px;
+            height: 2.5rem;
+        }
+        .cell {
+            flex: 1 1 0; 
+            min-width: 0;
+        }
+        .cell--wide2 {
+            flex: 2 1 0;
+        }
+        .footer {
+            background: aquamarine;
+            border: solid 2px black;
+            border-radius: 32px;
+            padding: 1rem;
+            text-align: center;
+            margin: 2rem 2.5% 0.5rem;
+        }
+        .hello {
+            font-size: 2rem;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2rem;
+                padding: 1.5rem 2rem;
+                width: 100%;
+            }
+            .header__title {
+                font-size: 2rem;
+            }
+            .nav__list {
+                flex-direction: row;
+                justify-content: flex-end;
+                gap: 2rem;
+            }
+            .nav__list a {
+                padding: 0.25rem 0.5rem;
+            }
+            .table-section{
+                order: initial; 
+            }
+            .links{ 
+                order: initial; 
+            }
+            .main {
+                width: 100%;
+                margin: 1rem auto 0;
+            }
+            .table__row {
+                height: 3.5rem;
+            }
+            .hello {
+                font-size: 2.5rem;
+            }
+        }
+        @media (min-width: 1200px) {
+            .main {
+                max-width: 1300px;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <header class="header" style="background-color: #f8f8f8;">
+        <img style="float:left; margin:1%; width:5%;" src="https://yandex.ru/images/search?search_client=unknown&text=%D0%BA%D0%BB%D1%83%D0%B1%D0%BD%D0%B8%D1%87%D0%BA%D0%B0+%D1%81%D0%B5%D0%BB%D0%B5%D1%81%D1%82%D0%B0%27&pos=1&rpt=simage&img_url=https%3A%2F%2Fyt3.googleusercontent.com%2FADDMBnVMlXrv9mFuTC04NKPRtaH2YSTYcqo56Gtm8o5GrtUc_LHqsNvtzrGrf9p0HIyi2wtsuw%3Ds900-c-k-c0x00ffffff-no-rj&from=tabbar&lr=35">
+        <div class="qwerty" style="float: right; border-radius: 45px; background-color:#ddd; padding:10px; width: 70%; border: 1px solid black; display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <a href="#q">Hyperlinks</a>
+        <a href="#qw" >Table</a>
+        <a href="#qwe" >Footer</a>
+      </div>
+      <h1 style="font-size: 230%; margin-top: 4rem;">Сайт для второго задания</h1>
+    </header>
+    <main class="main">
+        <div class="content-flex">
+            <section class="links" id="q">
+                <h2>Список гиперссылок</h2>
+                <p class="first_text">Вот список гиперссылок, которые нужны:</p>
+                <a href="http://kubsu.ru/index.html?ysclid=mtscsx1rft792456047">Ссылка на сайт КубГУ</a><br>
+                <a href="https://kubsu.ru/index.html?ysclid=mtscsx1rft792456047">Ссылка на сайт КубГУ, но https</a><br>
+                <a href="https://kubsu.ru/index.html?ysclid=mtscsx1rft792456047">
+                    <img src="https://avatars.mds.yandex.net/i?id=58459549003fc6e375fbc6b41c9d4a06_l-9706270-images-thumbs&n=13"
+                         class="imaga" alt="Ссылка-картинка">
+                </a><br>
+                <a href="https://kubsu.ru">Сокращенная ссылка</a><br>
+                <a href="https://kubsu.ru">Сокращённая на главную</a><br>
+                <a href="#qwe">На фрагмент текущей страницы</a><br>
+                <a href="https://example.com/landing?utm_source=yandex&utm_medium=cpc&utm_campaign=spring_sale">С тремя параметрами в URL</a><br>
+                <a href="https://example.com/page?id=123">С параметром id в URL</a><br>
+                <p>Относительные ссылки:</p>
+                <ol>
+                    <li><a href="in_that_katalog.html">Относительную в текущем каталоге</a></li>
+                    <li><a href="about/about.html">Oтносительную на страницу в каталоге about</a></li>
+                    <li><a href="for_high/for_high.html">Oтносительную на страницу в каталоге уровнем выше текущего</a></li>
+                    <li><a href="for_high/for_higher/for_higher.html">Oтносительную на страницу в каталоге двумя уровнями выше</a></li>
+                </ol>
+                <p>Наипрекраснейший текст, в котором есть
+                    <a href="https://kubsu.ru/index.html?ysclid=mtscsx1rft792456047">ссылка, </a>кстати она очень красивая
+                </p>
+                <a href="https://kubsu.ru/lib/images/Frame1217_1.png">На что-то из другого сайта</a><br>
+                <div class="mipo">
+                    <img src="For_mapa.bmp" alt="qwerty1" usemap="#myMap" width="400" height="400">
+                    <map name="myMap">
+                        <area shape="rect" coords="20, 60, 180, 140"
+                              href="https://kubsu.ru/index.html?ysclid=mtscsx1rft792456047"
+                              alt="На сайт" title="О нет меня нашли">
+                    </map>
+                </div>
+                <a href="" style="color: red;"></a>Ссылка с пустым href<br>
+                <a style="color: red;">Ссылка без href</a><br>
+                <a href="https://example.com" rel="nofollow">Ссылка nofollow</a><br>
+                <noindex>
+                    <p>Данный текст не будет индексироваться</p>
+                </noindex><br>
+                <p>Кстати, список был выше</p><br>
+                <a href="auto.html">Ссылка на форму</a>
+            </section>
+            <section class="table-section" id="qw">
+                <h2>Таблица</h2>
+                <div class="table">
+                    <div class="table__row">
+                        <div class="cell" style="background: red;"></div>
+                        <div class="cell" style="background: gray;"></div>
+                        <div class="cell" style="background: blueviolet;"></div>
+                        <div class="cell" style="background: blue;"></div>
+                    </div>
+                    <div class="table__row">
+                        <div class="cell" style="background: yellow;"></div>
+                        <div class="cell cell--wide2" style="background: green;"></div>
+                        <div class="cell" style="background: cyan;"></div>
+                    </div>
+                    <div class="table__row">
+                        <div class="cell cell--wide2" style="background: purple;"></div>
+                        <div class="cell" style="background: black;"></div>
+                        <div class="cell" style="background: #fff;"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer class="footer" id="qwe">
+        <h1 class="hello">Щербинин Лев</h1>
+    </footer>
+
+</body>
+</html>
