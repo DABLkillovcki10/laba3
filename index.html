@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание номер 2</title>
+    <title>Задание 3</title>
     <style>
         * {
             margin: 0;
@@ -16,21 +16,12 @@
             color: #111;
             line-height: 1.5;
         }
-        a:link{
-            color: rgb(0, 17, 255); 
-        }
-        a:visited{
-            color: rgb(255, 0, 0); 
-        }
-        a:hover{
-            color: rgb(255, 0, 221); 
-        }
-        a:active{
-            color: aquamarine; 
-        }
-        a{ 
-            text-decoration: none; 
-        }
+        a:link { color: rgb(0, 17, 255); }
+        a:visited { color: rgb(255, 0, 0); }
+        a:hover { color: rgb(255, 0, 221); }
+        a:active { color: aquamarine; }
+        a { text-decoration: none; }
+
         .header {
             display: flex;
             flex-direction: column;
@@ -42,7 +33,6 @@
             border-radius: 32px;
             margin: 0.5rem 2.5% 0;
         }
-       
         .nav {
             background: aquamarine;
             border: solid 2px black;
@@ -68,12 +58,8 @@
             flex-direction: column;
             gap: 1.5rem;
         }
-        .table-section{
-            order: -1; 
-        } 
-        .links{ 
-            order:  1; 
-        } 
+        .table-section { order: -1; }
+        .links { order: 1; }
         section {
             background: aquamarine;
             border: solid 2px black;
@@ -88,13 +74,12 @@
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
-        .imaga {
-            width: 13%;
-        }
+        .imaga { width: 13%; }
         .mipo {
             display: flex;
             justify-content: center;
         }
+
         .table {
             display: flex;
             flex-direction: column;
@@ -103,17 +88,22 @@
             background: black;
         }
         .table__row {
-    display: flex;
-    flex-direction: column; /* на мобилке — вертикально */
-    height: auto;
-}
-.cell {
-    width: 100%;            /* ячейка на всю ширину */
-}
-        
-        .cell--wide2 {
-            flex: 2 1 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            height: auto;
         }
+        .cell {
+            flex: 1 1 auto;
+            width: 100%;
+            min-height: 2rem;
+            border: 1px solid black;
+        }
+        .cell--wide2 {
+            flex: 1 1 auto;
+            width: 100%;
+        }
+
         .footer {
             background: aquamarine;
             border: solid 2px black;
@@ -126,6 +116,7 @@
             font-size: 2rem;
             text-align: center;
         }
+
         @media (min-width: 768px) {
             .header {
                 flex-direction: row;
@@ -145,32 +136,29 @@
             .nav__list a {
                 padding: 0.25rem 0.5rem;
             }
-            .table-section{
-                order: initial; 
-            }
-            .links{ 
-                order: initial; 
-            }
+            .table-section { order: initial; }
+            .links { order: initial; }
             .main {
                 width: 100%;
                 margin: 1rem auto 0;
             }
-            .table__row {
-                height: 3.5rem;
-            }
             .hello {
                 font-size: 2.5rem;
             }
+            .table__row {
+                flex-direction: row;
+                height: 3.5rem;
+            }
+            .cell {
+                flex: 1 1 0;
+                width: auto;
+                min-height: auto;
+            }
+            .cell--wide2 {
+                flex: 2 1 0;
+                width: auto;
+            }
         }
-       @media (min-width: 768px) {
-    .table__row {
-        flex-direction: row; /* на десктопе — горизонтально */
-        height: 2.5rem;
-    }
-    .cell {
-        width: auto;         /* возвращаем сетку */
-    }
-}   
     </style>
 </head>
 <body>
